@@ -32,7 +32,7 @@ yarn add @flex-development/loadenv # or npm i @flex-development/loadenv
 ## Built With
 
 - [`dotenv`][1] - Load variables from a `.env` file into [`process.env`][2]
-- [`dotenv-expand`][3] - Unix shell commands implementation for Node.js
+- [`dotenv-expand`][3] - Expand environment variables
 - [`log`][4] - Style logs for the console or terminal
 
 [1]: https://github.com/motdotla/dotenv
