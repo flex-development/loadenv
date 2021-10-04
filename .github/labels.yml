@@ -36,6 +36,10 @@
   description: GitHub Actions
   color: 74cefc
 
+- name: scope:cli
+  description: Command line interface
+  color: 74cefc
+
 - name: scope:dotenv
   description: Dotenv integrations
   color: 74cefc
@@ -50,6 +54,10 @@
 
 - name: scope:log
   description: Logging
+  color: 74cefc
+
+- name: scope:node
+  description: Node.js program
   color: 74cefc
 
 - name: scope:tests
