@@ -46,6 +46,7 @@ const config: UserConfig = {
       'always',
       [
         'actions',
+        'cli',
         'deploy',
         'deps',
         'deps-dev',
@@ -54,6 +55,7 @@ const config: UserConfig = {
         'dotenv',
         'github',
         'log',
+        'node',
         'release',
         'scripts',
         'tests',
