@@ -54,7 +54,6 @@ const config: UserConfig = {
         'deps-peer',
         'dotenv',
         'github',
-        'log',
         'node',
         'release',
         'scripts',
