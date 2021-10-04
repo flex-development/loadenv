@@ -47,6 +47,7 @@ const config: UserConfig = {
       [
         'action',
         'cli',
+        'config',
         'deploy',
         'deps',
         'deps-dev',
@@ -60,6 +61,7 @@ const config: UserConfig = {
         'tests',
         'tools',
         'typescript',
+        'utils',
         'workflows',
         'yarn'
       ]
