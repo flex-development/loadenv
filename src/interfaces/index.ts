@@ -3,4 +3,4 @@
  * @module loadenv/interfaces
  */
 
-export default {}
+export type { default as LoadEnvOptions } from './loadenv-options.interface'
