@@ -759,8 +759,8 @@ __metadata:
     "@zerollup/ts-transform-paths": 1.7.18
     comment-json: 4.1.1
     concurrently: 6.3.0
-    dotenv: 10.0.0
     dotenv-cli: 4.0.0
+    dotenv-defaults: 3.0.0
     dotenv-expand: 5.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
@@ -839,8 +839,6 @@ __metadata:
       optional: true
     shelljs:
       optional: true
-  bin:
-    
   checksum: 4e2b1d02638cc67eda51ddeda0ec27f11350aed6e1427e8dec4c56b957145e6828138a0a15892e56693365ac1764c3ea4540acc4241ca83b7501da1fc03cbef2
   languageName: node
   linkType: hard
@@ -3602,6 +3600,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv-defaults@npm:3.0.0":
+  version: 3.0.0
+  resolution: "dotenv-defaults@npm:3.0.0"
+  dependencies:
+    dotenv: ^10.0.0
+  checksum: e356d51efc810c6ae4b88a293e8ad4d63d6a83fa55b08c4cd58515b3aa42ac16ac718568cc666c3c7af28e868a172d7d72456d4e90ba699c6df48b5f1e1eae5f
+  languageName: node
+  linkType: hard
+
 "dotenv-expand@npm:5.1.0, dotenv-expand@npm:^5.1.0":
   version: 5.1.0
   resolution: "dotenv-expand@npm:5.1.0"
@@ -3609,7 +3616,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:10.0.0":
+"dotenv@npm:^10.0.0":
   version: 10.0.0
   resolution: "dotenv@npm:10.0.0"
   checksum: f412c5fe8c24fbe313d302d2500e247ba8a1946492db405a4de4d30dd0eb186a88a43f13c958c5a7de303938949c4231c56994f97d05c4bc1f22478d631b4005

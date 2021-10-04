@@ -31,11 +31,11 @@ yarn add @flex-development/loadenv # or npm i @flex-development/loadenv
 
 ## Built With
 
-- [`dotenv`][1] - Load variables from a `.env` file into [`process.env`][2]
+- [`dotenv-defaults`][1] - Load environment variables into [`process.env`][2]
 - [`dotenv-expand`][3] - Expand environment variables
 - [`log`][4] - Style logs for the console or terminal
 
-[1]: https://github.com/motdotla/dotenv
+[1]: https://github.com/mrsteele/dotenv-defaults
 [2]: https://nodejs.org/docs/latest/api/process.html#process_process_env
 [3]: https://github.com/motdotla/dotenv-expand
 [4]: https://github.com/flex-development/log

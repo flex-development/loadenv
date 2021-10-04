@@ -5,7 +5,7 @@
   "keywords": [
     ".env",
     "config",
-    "dotenv",
+    "dotenv-defaults",
     "dotenv-expand",
     "environment",
     "github actions",
@@ -111,7 +111,7 @@
   },
   "dependencies": {
     "@flex-development/log": "3.0.0-dev.0",
-    "dotenv": "10.0.0",
+    "dotenv-defaults": "3.0.0",
     "dotenv-expand": "5.1.0",
     "yargs": "17.2.1"
   },
@@ -190,7 +190,10 @@
     "yarn": "3.0.2"
   },
   "env": {
-    "optional": [],
+    "optional": [
+      "DOTENV_CONFIG_DEBUG",
+      "DOTENV_CONFIG_ENCODING"
+    ],
     "required": []
   },
   "packageManager": "yarn@3.0.2"
