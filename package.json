@@ -54,14 +54,6 @@
       "require": "./cjs/config/*.js"
     },
     "./cjs/*": "./cjs/*.js",
-    "./enums": {
-      "import": "./esm/enums/index.js",
-      "require": "./cjs/enums/index.js"
-    },
-    "./enums/*": {
-      "import": "./esm/enums/*.js",
-      "require": "./cjs/enums/*.js"
-    },
     "./esm/*": "./esm/*.js",
     "./interfaces": {
       "import": "./esm/interfaces/index.js",

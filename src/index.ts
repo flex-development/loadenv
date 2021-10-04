@@ -6,7 +6,6 @@ import loadenv from './load'
  */
 
 export { default as defaults } from './config/defaults.config'
-export * from './enums'
 export * from './interfaces'
 export * from './types'
 

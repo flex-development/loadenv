@@ -119,7 +119,6 @@ module.exports = {
           'cjs',
           'commonjs',
           'dotenv',
-          'enums',
           'esm',
           'extensionless',
           'loadenv',
