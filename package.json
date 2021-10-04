@@ -6,8 +6,10 @@
     ".env",
     "config",
     "dotenv",
+    "dotenv-expand",
     "environment",
     "github actions",
+    "github-env",
     "settings",
     "variables"
   ],
