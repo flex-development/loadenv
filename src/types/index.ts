@@ -3,4 +3,5 @@
  * @module loadenv/types
  */
 
-export default {}
+export type { default as EnvObject } from './env-object.type'
+
