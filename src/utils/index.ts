@@ -3,4 +3,4 @@
  * @module loadenv/utils
  */
 
-export default {}
+export { default as logger } from './logger.util'

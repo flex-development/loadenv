@@ -740,6 +740,7 @@ __metadata:
     "@commitlint/types": 13.2.0
     "@flex-development/grease": 2.0.0
     "@flex-development/log": 3.0.0-dev.0
+    "@flex-development/tutils": 3.1.7
     "@jest/globals": 27.2.4
     "@jest/types": 27.2.4
     "@loadenv": "link:src"

@@ -111,6 +111,7 @@
   },
   "dependencies": {
     "@flex-development/log": "3.0.0-dev.0",
+    "@flex-development/tutils": "3.1.7",
     "dotenv-defaults": "3.0.0",
     "dotenv-expand": "5.1.0",
     "yargs": "17.2.1"
