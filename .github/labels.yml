@@ -32,8 +32,8 @@
 # Scope labels
 # Project-specific groups for issues, pull requests, and discussions.
 
-- name: scope:actions
-  description: GitHub Actions
+- name: scope:action
+  description: GitHub Action
   color: 74cefc
 
 - name: scope:cli
