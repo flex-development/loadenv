@@ -1,5 +1,3 @@
-import type { LoadEnvOptions } from '@loadenv/interfaces'
-
 /**
  * @file Type Definitions - LoadEnvDefaults
  * @module loadenv/types/LoadEnvDefaults
@@ -18,7 +16,7 @@ type LoadEnvDefaults = {
   defaults: false
 
   /** {@link LoadEnvOptions.env} */
-  env: NonNullable<LoadEnvOptions['env']>
+  env: '.env'
 
   /** {@link LoadEnvOptions.github} */
   github: false
@@ -31,6 +29,9 @@ type LoadEnvDefaults = {
 
   /** {@link LoadEnvOptions.root} */
   root: ReturnType<typeof process['cwd']>
+
+  /** {@link LoadEnvOptions.splitter} */
+  splitter: ','
 
   /** {@link LoadEnvOptions.verbose} */
   verbose: false

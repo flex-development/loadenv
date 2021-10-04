@@ -129,6 +129,7 @@ module.exports = {
           'prepack',
           'rimraf',
           'rollup',
+          'splitter',
           'tgz',
           'tsconfig',
           'ttsc',

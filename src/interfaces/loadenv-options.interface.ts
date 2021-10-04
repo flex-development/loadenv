@@ -9,7 +9,7 @@
 interface LoadEnvOptions {
   /**
    * Enable environment variable cascading. To pick multiple environment files,
-   * pass a comma-separated, priority-ordered list.
+   * pass a delimited, priority-ordered list.
    *
    * @example
    *  load({ cascade: 'production' })
@@ -37,7 +37,7 @@ interface LoadEnvOptions {
 
   /**
    * Name of environment file(s) to load. To load multiple environment files,
-   * pass a comma-separated, priority-ordered list.
+   * pass a delimited, priority-ordered list.
    *
    * @default '.env'
    */
@@ -57,7 +57,7 @@ interface LoadEnvOptions {
    *
    * If `true`, `env` or files indicated by `cascade` will be used to override
    * variables. Pass a string value to set an override file. To cascade override
-   * files, pass a comma-separated, priority-ordered list.
+   * files, pass a delimited, priority-ordered list.
    *
    * @see https://github.com/motdotla/dotenv#what-happens-to-environment-variables-that-were-already-set
    *
@@ -67,7 +67,7 @@ interface LoadEnvOptions {
 
   /**
    * Name of environment variable(s) to print. To print multiple variables, pass
-   * a comma-separated, priority-ordered list of names (case-sensitive).
+   * a delimited, priority-ordered list of names (case-sensitive).
    *
    * If `print.includes('result')`, a `LoadEnvResult` object will be logged.
    *
@@ -81,6 +81,13 @@ interface LoadEnvOptions {
    * @default process.cwd()
    */
   root?: string
+
+  /**
+   * Delimiter used in lists.
+   *
+   * @default ','
+   */
+  splitter?: string
 
   /**
    * Enable [`dotenv` logs][1].

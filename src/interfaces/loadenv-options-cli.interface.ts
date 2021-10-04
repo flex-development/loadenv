@@ -32,6 +32,9 @@ interface LoadEnvOptionsCLI extends LoadEnvOptions {
   /** {@link LoadEnvOptions.root} */
   r?: LoadEnvOptions['root']
 
+  /** {@link LoadEnvOptions.splitter} */
+  s?: LoadEnvOptions['splitter']
+
   /** {@link LoadEnvOptions.verbose} */
   v?: LoadEnvOptions['verbose']
 }

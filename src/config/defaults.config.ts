@@ -5,7 +5,7 @@ import type { LoadEnvDefaults } from '@loadenv/types'
  * @module loadenv/config/defaults
  */
 
-export default {
+const DEFAULTS: LoadEnvDefaults = {
   cascade: undefined,
   defaults: false,
   env: '.env',
@@ -13,5 +13,8 @@ export default {
   override: false,
   print: undefined,
   root: process.cwd(),
+  splitter: ',',
   verbose: false
-} as LoadEnvDefaults
+}
+
+export default DEFAULTS
