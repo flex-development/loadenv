@@ -743,7 +743,10 @@ __metadata:
     "@flex-development/tutils": 3.1.7
     "@jest/globals": 27.2.4
     "@jest/types": 27.2.4
-    "@loadenv": "link:src"
+    "@loadenv/config": "link:src/config"
+    "@loadenv/interfaces": "link:src/interfaces"
+    "@loadenv/types": "link:src/types"
+    "@loadenv/utils": "link:src/utils"
     "@tests/fixtures": "link:__tests__/__fixtures__"
     "@tests/utils": "link:__tests__/utils"
     "@types/fs-extra": 9.0.13
@@ -758,6 +761,7 @@ __metadata:
     "@typescript-eslint/parser": 4.32.0
     "@vates/toggle-scripts": 1.0.0
     "@zerollup/ts-transform-paths": 1.7.18
+    chalk: 4.1.2
     comment-json: 4.1.1
     concurrently: 6.3.0
     dotenv-cli: 4.0.0
@@ -1158,9 +1162,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@loadenv@link:src::locator=%40flex-development%2Floadenv%40workspace%3A.":
+"@loadenv/config@link:src/config::locator=%40flex-development%2Floadenv%40workspace%3A.":
   version: 0.0.0-use.local
-  resolution: "@loadenv@link:src::locator=%40flex-development%2Floadenv%40workspace%3A."
+  resolution: "@loadenv/config@link:src/config::locator=%40flex-development%2Floadenv%40workspace%3A."
+  languageName: node
+  linkType: soft
+
+"@loadenv/interfaces@link:src/interfaces::locator=%40flex-development%2Floadenv%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@loadenv/interfaces@link:src/interfaces::locator=%40flex-development%2Floadenv%40workspace%3A."
+  languageName: node
+  linkType: soft
+
+"@loadenv/types@link:src/types::locator=%40flex-development%2Floadenv%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@loadenv/types@link:src/types::locator=%40flex-development%2Floadenv%40workspace%3A."
+  languageName: node
+  linkType: soft
+
+"@loadenv/utils@link:src/utils::locator=%40flex-development%2Floadenv%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@loadenv/utils@link:src/utils::locator=%40flex-development%2Floadenv%40workspace%3A."
   languageName: node
   linkType: soft
 
