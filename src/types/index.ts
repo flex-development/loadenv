@@ -4,4 +4,5 @@
  */
 
 export type { default as EnvObject } from './env-object.type'
+export type { default as LoadEnvResult } from './loadenv-result.type'
 
