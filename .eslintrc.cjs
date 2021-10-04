@@ -1,9 +1,6 @@
-const prettierConfig = require('./.prettierrc.cjs')
-
 /**
  * @file ESLint Configuration
  * @see https://eslint.org/docs/user-guide/configuring
- * @see https://github.com/prettier/eslint-config-prettier
  */
 
 module.exports = {
@@ -86,7 +83,7 @@ module.exports = {
     ],
     'no-ex-assign': 0,
     'prefer-arrow-callback': 2,
-    'prettier/prettier': [2, prettierConfig],
+    'prettier/prettier': [2, require('./.prettierrc.cjs')],
     'sort-keys': [
       1,
       'asc',

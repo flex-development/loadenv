@@ -1,6 +1,7 @@
 {
   "eslint.options": {
-    "configFile": "./.eslintrc.cjs"
+    "configFile": "./.eslintrc.cjs",
+    "extensions": [".cjs", ".js", ".md", ".ts"]
   },
   "files.associations": {
     ".env": "shellscript",
