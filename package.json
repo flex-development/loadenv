@@ -1,0 +1,203 @@
+{
+  "name": "@flex-development/loadenv",
+  "description": "Load environment variables into process.env and $GITHUB_ENV",
+  "version": "1.0.0",
+  "keywords": [
+    ".env",
+    "config",
+    "dotenv",
+    "environment",
+    "github actions",
+    "settings",
+    "variables"
+  ],
+  "homepage": "https://github.com/flex-development/loadenv",
+  "repository": "git://github.com/flex-development/loadenv.git",
+  "bugs": {
+    "url": "https://github.com/flex-development/loadenv/issues"
+  },
+  "license": "BSD-3-Clause",
+  "contributors": [
+    {
+      "name": "Lexus Drumgold",
+      "url": "https://github.com/unicornware"
+    }
+  ],
+  "publishConfig": {
+    "access": "public",
+    "directory": "./"
+  },
+  "type": "module",
+  "files": [
+    "cjs",
+    "esm",
+    "types",
+    "CHANGELOG.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./esm/index.js",
+      "require": "./cjs/index.js"
+    },
+    "./*": {
+      "import": "./esm/*.js",
+      "require": "./cjs/*.js"
+    },
+    "./bin/*": {
+      "import": "./esm/bin/*.js",
+      "require": "./cjs/bin/*.js"
+    },
+    "./config/*": {
+      "import": "./esm/config/*.js",
+      "require": "./cjs/config/*.js"
+    },
+    "./cjs/*": "./cjs/*.js",
+    "./enums": {
+      "import": "./esm/enums/index.js",
+      "require": "./cjs/enums/index.js"
+    },
+    "./enums/*": {
+      "import": "./esm/enums/*.js",
+      "require": "./cjs/enums/*.js"
+    },
+    "./esm/*": "./esm/*.js",
+    "./interfaces": {
+      "import": "./esm/interfaces/index.js",
+      "require": "./cjs/interfaces/index.js"
+    },
+    "./interfaces/*": {
+      "import": "./esm/interfaces/*.js",
+      "require": "./cjs/interfaces/*.js"
+    },
+    "./load": {
+      "import": "./esm/load.js",
+      "require": "./cjs/load.js"
+    },
+    "./package.json": "./package.json",
+    "./types": {
+      "import": "./esm/types/index.js",
+      "require": "./cjs/types/index.js"
+    },
+    "./types/*": {
+      "import": "./esm/types/*.js",
+      "require": "./cjs/types/*.js"
+    },
+    "./utils": {
+      "import": "./esm/utils/index.js",
+      "require": "./cjs/utils/index.js"
+    },
+    "./utils/*": {
+      "import": "./esm/utils/*.js",
+      "require": "./cjs/utils/*.js"
+    }
+  },
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "clean:build": "rimraf ./(cjs|esm|types)",
+    "clean:modules": "rimraf ./node_modules",
+    "clean:yarn": "rimraf .yarn/cache .yarn/*.gz",
+    "clean": "concurrently \"yarn:clean:*\"",
+    "postinstall": "is-ci || husky-run install",
+    "check:dedupe": "yarn dedupe --check",
+    "check:format": "prettier --check .",
+    "check:install": "yarn dlx @yarnpkg/doctor .",
+    "check:style": "eslint . --ext md,js,ts",
+    "check:upgrades": "yarn upgrade-interactive",
+    "fix:format": "prettier --write .",
+    "fix:style": "yarn check:style --fix --cache",
+    "test": "bash ./tools/scripts/jest.sh",
+    "build": "node ./tools/cli/build.ts",
+    "prepack": "toggle-scripts -postinstall && yarn build",
+    "postpack": "toggle-scripts +postinstall",
+    "release": "node ./tools/cli/release.ts",
+    "prepublishOnly": "toggle-scripts -prepack",
+    "postpublish": "toggle-scripts +prepack"
+  },
+  "dependencies": {
+    "@flex-development/log": "3.0.0-dev.0",
+    "dotenv": "10.0.0",
+    "dotenv-expand": "5.1.0",
+    "yargs": "17.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.15.5",
+    "@babel/eslint-parser": "7.15.7",
+    "@commitlint/cli": "13.2.0",
+    "@commitlint/config-conventional": "13.2.0",
+    "@commitlint/format": "13.2.0",
+    "@commitlint/types": "13.2.0",
+    "@flex-development/grease": "2.0.0",
+    "@jest/globals": "27.2.4",
+    "@jest/types": "27.2.4",
+    "@loadenv": "link:src",
+    "@tests/fixtures": "link:__tests__/__fixtures__",
+    "@tests/utils": "link:__tests__/utils",
+    "@types/fs-extra": "9.0.13",
+    "@types/jest": "27.0.2",
+    "@types/lodash.merge": "4.6.6",
+    "@types/mvdan-sh": "0.5.1",
+    "@types/node": "16.10.2",
+    "@types/resolve": "1.20.1",
+    "@types/rimraf": "3.0.2",
+    "@types/shelljs": "0.8.9",
+    "@typescript-eslint/eslint-plugin": "4.32.0",
+    "@typescript-eslint/parser": "4.32.0",
+    "@vates/toggle-scripts": "1.0.0",
+    "@zerollup/ts-transform-paths": "1.7.18",
+    "comment-json": "4.1.1",
+    "concurrently": "6.3.0",
+    "dotenv-cli": "4.0.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-import-resolver-node": "0.3.6",
+    "eslint-import-resolver-typescript": "2.5.0",
+    "eslint-plugin-import": "2.24.2",
+    "eslint-plugin-jest": "24.5.0",
+    "eslint-plugin-jsdoc": "36.1.0",
+    "eslint-plugin-markdown": "2.2.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-spellcheck": "0.0.19",
+    "eslint-plugin-tree-shaking": "1.9.2",
+    "eslint-plugin-unicorn": "36.0.0",
+    "fs-extra": "10.0.0",
+    "husky": "4.3.8",
+    "is-ci": "3.0.0",
+    "jest": "27.2.4",
+    "jest-extended": "0.11.5",
+    "jest-github-reporter": "1.0.2",
+    "jest-mock-console": "1.2.3",
+    "lint-staged": "11.1.2",
+    "lodash.merge": "4.6.2",
+    "prettier": "2.4.1",
+    "prettier-plugin-sh": "0.7.1",
+    "read-pkg": "7.0.0",
+    "replace-in-file": "6.2.0",
+    "rimraf": "3.0.2",
+    "shelljs": "0.8.4",
+    "ts-jest": "27.0.5",
+    "ts-node": "10.2.1",
+    "tsconfig-paths": "3.11.0",
+    "ttypescript": "1.5.12",
+    "typescript": "4.4.3"
+  },
+  "peerDependencies": {
+    "typescript": ">=4.4.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0",
+    "yarn": "3.0.2"
+  },
+  "env": {
+    "optional": [],
+    "required": []
+  },
+  "packageManager": "yarn@3.0.2"
+}
